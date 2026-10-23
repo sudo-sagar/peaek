@@ -37,7 +37,7 @@ def run_refresh(label):
         db.close()
 
 
-@scheduler.scheduled_job("interval", hours=6, id="refresh_job")
+@scheduler.scheduled_job("cron", hour=6, minute=0, id="refresh_job")
 def scheduled_refresh():
     run_refresh("Scheduled")
 
