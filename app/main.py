@@ -65,7 +65,7 @@ def health():
 
 
 @app.post("/admin/refresh-cards")
-def refresh_cards_endpoint(region: str = "IN", max_per_category: int = 5):
+def refresh_cards_endpoint(region: str = "IN", max_per_category: int = 3):
     db = SessionLocal()
     try:
         count = refresh_top_comments(db, region=region, max_per_category=max_per_category)
