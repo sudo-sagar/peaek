@@ -81,3 +81,30 @@ def get_trending_videos(region="IN", category_ids=None, max_per_category=3):
             print(f"Error searching category {cat_id}: {e}")
 
     return all_videos
+def fetch_top_comment(video_id):
+    """Fetch the single highest-liked comment for a video. 1 quota unit."""
+    try:
+        request = youtube.commentThreads().list(
+            part="snippet",
+            videoId=video_id,
+            maxResults=100,
+            order="relevance",
+            textFormat="plainText",
+        )
+        response = request.execute()
+
+        best = None
+        for item in response.get("items", []):
+            s = item["snippet"]["topLevelComment"]["snippet"]
+            likes = int(s.get("likeCount", 0))
+            if best is None or likes > best["comment_likes"]:
+                best = {
+                    "comment_text": s["textDisplay"],
+                    "comment_author": s.get("authorDisplayName"),
+                    "comment_likes": likes,
+                    "comment_reply_count": int(item["snippet"].get("totalReplyCount", 0)),
+                }
+        return best
+    except Exception as e:
+        print(f"Comment fetch error for {video_id}: {e}")
+        return None
