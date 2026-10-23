@@ -7,15 +7,24 @@ from app import models, schemas
 router = APIRouter(prefix="/api", tags=["cards"])
 
 CATEGORY_MAP = {
+    "1": "Film & Animation",
+    "2": "Autos & Vehicles",
+    "10": "Music",
+    "15": "Pets & Animals",
+    "17": "Sports",
+    "18": "Short Movies",
+    "19": "Travel & Events",
+    "20": "Gaming",
+    "22": "People & Blogs",
     "23": "Comedy",
     "24": "Entertainment",
-    "20": "Gaming",
-    "17": "Sports",
-    "10": "Music",
+    "25": "News & Politics",
+    "26": "Howto & Style",
+    "27": "Education",
+    "28": "Science & Technology"
 }
 
-CATEGORY_ORDER = ["23", "24", "20", "17", "10"]
-
+CATEGORY_ORDER = ["23", "24", "20", "17", "10", "1", "2", "15", "18", "19", "22", "25", "26", "27", "28"]
 
 @router.get("/cards", response_model=List[schemas.TopCommentOut])
 def get_cards(
