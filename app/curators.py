@@ -18,7 +18,7 @@ def is_worth_keeping(text):
     return True
 
 
-def refresh_top_comments(db: Session, region="IN", max_per_category=5, expiry_hours=24):
+def refresh_top_comments(db: Session, region="IN", max_per_category=3, expiry_hours=24):
     now = datetime.utcnow()
     cutoff = now - timedelta(hours=expiry_hours)
 
