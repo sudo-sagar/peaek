@@ -60,7 +60,7 @@ Keep-Alive	UptimeRobot	Prevent Render free-tier cold starts
 
 
 📂 Project Structure
-text
+```text
 peaek/
 ├── app/                      # Backend (Python FastAPI)
 │   ├── main.py               # Entry point, CORS, APScheduler setup
@@ -83,6 +83,7 @@ peaek/
 │
 ├── requirements.txt          # Python dependencies
 └── README.md
+```
 
 ## API Endpoints
 Backend (FastAPI)
