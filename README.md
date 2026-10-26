@@ -7,18 +7,15 @@ Instead of scrolling through thousands of spam comments, Peaek curates the singl
 ## Architecture
 
 Peaek is built as a decoupled **Full-Stack Mobile Application** with a React Native frontend and a Python FastAPI backend.
-```mermaid
 graph TD
-[ Mobile App (React Native / Expo) ]
-               │
-               ▼ (HTTPS)
-[ Backend API (FastAPI on Render) ]
-               │
-               ├──▶ [ YouTube Data API v3 ]
-               │
-               ▼
-[ Database (SQLite) ]
-```
+    A["Mobile App (React Native / Expo)"]
+    B["Backend API (FastAPI on Render)"]
+    C["YouTube Data API v3"]
+    D["Database (Supabase / PostgreSQL)"]
+
+    A -->|HTTPS| B
+    B --> C
+    B --> D
 
 1. The Backend (/app)
 Framework: FastAPI (Python)
