@@ -8,7 +8,6 @@ Instead of scrolling through thousands of spam comments, Peaek curates the singl
 
 Peaek is built as a decoupled **Full-Stack Mobile Application** with a React Native frontend and a Python FastAPI backend.
 
-```text
 [ Mobile App (React Native / Expo) ]
                │
                ▼ (HTTPS)
