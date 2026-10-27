@@ -85,6 +85,14 @@ peaek/
 └── README.md
 ```
 
+## Results
+<img width="292" height="645" alt="sr1" src="https://github.com/user-attachments/assets/a156476e-0bdc-4344-b50a-b24631299e5a" />
+<img width="292" height="644" alt="sr2" src="https://github.com/user-attachments/assets/026a8d21-963d-4752-89f5-941a17551c95" />
+<img width="292" height="644" alt="sr3" src="https://github.com/user-attachments/assets/c46739dd-7285-4f46-9ffb-b62406c571ac" />
+<img width="292" height="644" alt="sr4" src="https://github.com/user-attachments/assets/bb816ab9-cb37-4006-9ac6-660176e4fc43" />
+<img width="289" height="643" alt="sr5" src="https://github.com/user-attachments/assets/bd87cec4-6cce-4604-9ca8-31fa6b252bbe" />
+<img width="291" height="642" alt="sr6" src="https://github.com/user-attachments/assets/6daab36c-b28b-482b-a4be-bf7088bdb940" />
+
 ## API Endpoints
 Backend (FastAPI)
 GET /api/cards?limit=50&category=23 - Fetches the curated top comments. (Leave category blank to get all).
